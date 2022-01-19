@@ -8,4 +8,5 @@ alias k9='rlwrap -r ~/k/li2.0'
 
 eval "$(thefuck --alias)"
 
-alias gitpush='CWD=${PWD##*/};git push https://${TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
+export GIT_TOKEN='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'
+alias gitpush='CWD=${PWD##*/};git push https://${GIT_TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
