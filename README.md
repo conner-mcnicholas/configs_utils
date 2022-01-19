@@ -1,12 +1,9 @@
 # configs_utils
-Shell settings and plugins for a most prodigious terminal IDE.
-Tailored for developing in q,k,python,sql,git,bash.  
-Includes bells+whistles such as: 
-  linting
-  code completion
-  syntax highlighting
-  hyperlinks to manuals
-  folder tree navigation
-  ...and MUCH MUCH MORE!  
-
+Terminal settings and plugins for a most prodigious vim IDE tailored for q,k,python,sql,git,bash development activities:<br>
+&emsp;&emsp;linting<br>
+&emsp;&emsp;code completion<br>
+&emsp;&emsp;syntax highlighting<br>
+&emsp;&emsp;hyperlinks to man pages<br>
+&emsp;&emsp;interactive folder tree nav panel<br>
+&emsp;&emsp;...and MUCH MUCH MORE!<br><br>
 Because github beats looking for scripts "in that place where I put that thing that time"
