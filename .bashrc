@@ -9,7 +9,8 @@ alias k9='rlwrap -r ~/k/li2.0'
 alias duroot="cd /;sudo du -sh bin boot cdrom dev etc home lib lib32 libx32 lib64 lost+found mnt opt root sbin snap srv swapfile sys usr tmp var | sort -rh | head -10"
 alias duhome="cd;sudo du -sh * | sort -rh | head -10"
 
-alias searchrt="cd /;sudo find . -name"
+alias searchrt="sudo find / -name"
+alias searchm="sudo find ~ -name"
 
 alias simps="echo '    PID    PPID USER         ELAPSED COMMAND';ps -eo pid,ppid,user,etime,comm | grep"
 
