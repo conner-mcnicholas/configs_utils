@@ -18,3 +18,5 @@ alias dftot="df -h | grep -v tmpfs | grep -v 100% | grep -v 0% | grep -v p1"
 
 source ~/.gitAccessToken
 alias gitpush='CWD=${PWD##*/};git push https://${GIT_TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
+
+gclone() { git clone https://github.com/conner-mcnicholas/$@.git; }
