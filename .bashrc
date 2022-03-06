@@ -7,7 +7,7 @@ alias q='rlwrap -r $QHOME/l64/q'
 alias k9='rlwrap -r ~/k/li2.0'
 
 alias duroot="sudo du -ahd 0 /bin /boot /cdrom /dev /etc /home /lib /lib32 /libx32 /lib64 /lost+found /mnt /opt /root /sbin /snap /srv /swapfile /sys /usr /tmp /var | sort -h"
-alias duhome="du -ahd 1 ~ | sort -h"
+alias duhome="du -ahd 1 ~ | sort -h | sed s/'\/home\/conner'/'~'/g"
 
 alias searchrt="sudo find / -name"
 alias searchm="sudo find ~ -name"
