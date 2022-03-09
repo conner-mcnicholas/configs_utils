@@ -7,3 +7,5 @@ Terminal settings and plugins for a most prodigious vim IDE tailored for q,k,pyt
 &emsp;&emsp;interactive folder tree nav panel<br>
 &emsp;&emsp;...and MUCH MUCH MORE!<br><br>
 Because github beats looking for scripts "in that place where I put that thing that time"
+
+![alt text](https://github.com/conner-mcnicholas/configs_utils/blob/main/settingimg.png?raw=true)
