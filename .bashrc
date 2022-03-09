@@ -14,7 +14,7 @@ alias searchm="sudo find ~ -name"
 
 alias simps="echo '    PID    PPID USER         ELAPSED COMMAND';ps -eo pid,ppid,user,etime,comm | grep"
 
-alias dftot="df -h | grep -v tmpfs | grep -v 100% | grep -v 0% | grep -v p1"
+alias dftot="df -h  | grep -v tmpfs | grep -v 100% | grep -v ' 0%' | grep -v p1"
 
 source ~/.gitAccessToken
 alias gitpush='CWD=${PWD##*/};git push https://${GIT_TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
