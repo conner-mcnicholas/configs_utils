@@ -20,3 +20,5 @@ source ~/.gitAccessToken
 alias gitpush='CWD=${PWD##*/};git push https://${GIT_TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
 
 gclone() { git clone https://github.com/conner-mcnicholas/$@.git; }
+
+alias memstats="free | grep Mem | awk '{print \"Memory Utilization: \n-------------------\nUsed:       \"int(100*\$3/\$2)\"%\nFree:       \"int(100*\$4/\$2)\"%\nShared:      \"int(100*\$5/\$2)\"%\nBuff/Cache: \"int(100*\$6/\$2)\"%\nAvailable:  \"int(100*\$7/\$2)\"%\"}'"
