@@ -28,4 +28,4 @@ gclone() { git clone https://github.com/conner-mcnicholas/$@.git; }
 
 alias memstats="free | grep Mem | awk '{print \"Memory Utilization: \n-------------------\nUsed:       \"int(100*\$3/\$2)\"%\nFree:       \"int(100*\$4/\$2)\"%\nShared:      \"int(100*\$5/\$2)\"%\nBuff/Cache: \"int(100*\$6/\$2)\"%\nAvailable:  \"int(100*\$7/\$2)\"%\"}'"
 
-alias storstats="df | grep nvme0n1p2 | awk '{print \"Storage Utilization: \n--------------------\nUsed:        \"int(100*\$3/\$2)\"%\nAvailable:   \"int(100*\$4/\$2)\"%\nReserved:     \"100-int(100*(\$4+\$3)/\$2)\"%\"}'"
+alias storstats="df | grep \" /$\" | awk '{print \"Storage Utilization: \n--------------------\nUsed:        \"int(100*\$3/\$2)\"%\nAvailable:   \"int(100*\$4/\$2)\"%\nReserved:     \"100-int(100*(\$4+\$3)/\$2)\"%\"}'"
