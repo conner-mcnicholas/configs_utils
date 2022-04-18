@@ -3,13 +3,17 @@ alias la='ls -A'
 alias l='ls -CF'
 
 export QHOME='/home/conner/q'
+
 alias q='rlwrap -r $QHOME/l64/q'
+
 alias k9='rlwrap -r ~/k/li2.0'
 
 alias duroot="sudo du -ahd 0 /bin /boot /cdrom /dev /etc /home /lib /lib32 /libx32 /lib64 /lost+found /mnt /opt /root /sbin /snap /srv /swapfile /sys /usr /tmp /var | sort -h"
+
 alias duhome="du -ahd 1 ~ | sort -h | sed s/'\/home\/conner'/'~'/g"
 
 alias searchrt="sudo find / -name"
+
 alias searchm="sudo find ~ -name"
 
 alias simps="echo '    PID    PPID USER         ELAPSED COMMAND';ps -eo pid,ppid,user,etime,comm | grep"
@@ -17,8 +21,11 @@ alias simps="echo '    PID    PPID USER         ELAPSED COMMAND';ps -eo pid,ppid
 alias dftot="df -h  | grep -v tmpfs | grep -v 100% | grep -v ' 0%' | grep -v p1"
 
 source ~/.gitAccessToken
+
 alias gitpush='CWD=${PWD##*/};git push https://${GIT_TOKEN}@github.com/conner-mcnicholas/${CWD}.git'
 
 gclone() { git clone https://github.com/conner-mcnicholas/$@.git; }
 
 alias memstats="free | grep Mem | awk '{print \"Memory Utilization: \n-------------------\nUsed:       \"int(100*\$3/\$2)\"%\nFree:       \"int(100*\$4/\$2)\"%\nShared:      \"int(100*\$5/\$2)\"%\nBuff/Cache: \"int(100*\$6/\$2)\"%\nAvailable:  \"int(100*\$7/\$2)\"%\"}'"
+
+alias storstats="df | grep nvme0n1p2 | awk '{print \"Storage Utilization: \n--------------------\nUsed:        \"int(100*\$3/\$2)\"%\nAvailable:   \"int(100*\$4/\$2)\"%\nReserved:     \"100-int(100*(\$4+\$3)/\$2)\"%\"}'"
