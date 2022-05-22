@@ -1,0 +1,1 @@
+grep -Ev '^\s*$|free' .bashrc
