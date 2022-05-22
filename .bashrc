@@ -2,15 +2,15 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-export QHOME='~/q'
-
 if [[ $(uname -s) == Linux ]]
 then
+	export QHOME='/home/conner/q'
 	alias q='rlwrap -r $QHOME/l64/q'
 	alias k9='rlwrap -r ~/k/li2.0'
 	alias duhome="du -ahd 1 ~ | sort -h | sed s/'\/home\/conner'/'~'/g"
 	alias duroot="sudo du -ahd 0 /bin /boot /cdrom /dev /etc /lib /lib32 /libx32 /lib64 /lost+found /mnt /opt /root /sbin /snap /srv /swapfile /sys /usr /tmp /var | sort -h"
 else
+	export QHOME='/Users/conner/q'
 	alias q='rlwrap -r $QHOME/m64/q'
 	alias k9='rlwrap -r ~/k/mi2.0'
 	alias duhome="du -hd 1 ~ | sort -h | sed s/'\/Users\/conner'/'~'/g"
