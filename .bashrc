@@ -12,7 +12,7 @@ then
 	alias dftot="df -h  | grep -v tmpfs | grep -v 100% | grep -v ' 0%' | grep -v p1"
 	alias memstats="free | grep Mem | awk '{print \"Memory Utilization: \n-------------------\nUsed:       \"int(100*\$3/\$2)\"%\nFree:       \"int(100*\$4/\$2)\"%\nShared:      \"int(100*\$5/\$2)\"%\nBuff/Cache: \"int(100*\$6/\$2)\"%\nAvailable:  \"int(100*\$7/\$2)\"%\"}'"
 	alias storstats="df | grep \" /$\" | awk '{print \"Storage Utilization: \n--------------------\nUsed:      \"int(100*\$3/\$2)\"%\nReserved:   \"100-int(100*(\$4+\$3)/\$2)\"%\nAvailable: \"int(100*\$4/\$2)\"%\"}'"
-alias map="telnet mapscii.me"	
+	alias membyproc="sudo ps_mem -p $(pgrep -d, -u $USER)"
 else
 	export QHOME='/Users/conner/q'
 	alias q='rlwrap -r $QHOME/m64/q'
@@ -20,6 +20,7 @@ else
 	alias duhome="du -hd 1 ~ | sort -h | sed s/'\/Users\/conner'/'~'/g"
 	alias duroot="sudo du -hd 1 / 2>/dev/null | sort -h"
 	alias dftot="df -hln"
+	alias membyproc="sudo ps_mem -p $(pgrep -d, -u $USER)"
 fi
 
 alias searchrt="sudo find / -name"
